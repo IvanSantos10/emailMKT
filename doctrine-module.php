@@ -12,4 +12,5 @@ $container = require 'config/container.php';
 $app = $container->get(\Zend\Expressive\Application::class);
 
 $cli = $app->getContainer()->get('doctrine.cli');
+require __DIR__ . '/src/CodeEmailMKT/Infrastructure/config/doctrine.php';
 exit($cli->run());
